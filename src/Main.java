@@ -1,5 +1,3 @@
-// the main problem here is my player projectiles (player bullets) - their behavior)
-
 
 import javax.swing.*;
 import java.awt.*;
@@ -42,10 +40,19 @@ public class Main extends JPanel {
         playerBullets = new ArrayList();
         alienProjectiles = new ArrayList();
 
+        StylingRectangles background = new StylingRectangles(800,800,0,0);
+
         enemies = new ArrayList();
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 12; j++) {
-                enemies.add(new Sprite(Resources.purpleSquid, new Point(getWidth()/2-(12*60)/2+j*60,100+i*60)));
+                if(i== 0 || i == 4){
+                    enemies.add(new Sprite(Resources.purpleSquid, new Point(getWidth()/2-(12*60)/2+j*60,100+i*60)));
+                }if(i== 1 || i == 2){
+                    enemies.add(new Sprite(Resources.greenAlienBall, new Point(getWidth()/2-(12*60)/2+j*60,100+i*60)));
+                }if(i==3){
+                    enemies.add(new Sprite(Resources.charlie, new Point(getWidth()/2-(12*60)/2+j*60,100+i*60)));
+                }
+
             }
 
 
@@ -152,7 +159,7 @@ public class Main extends JPanel {
 
         for (Sprite enemy: enemies) {
             if(Math.random()<.0002){
-                alienProjectiles.add(new Sprite(Resources.playerBullet, new Point(enemy.getX() - 3, enemy.getY() - 35)));
+                alienProjectiles.add(new Sprite(Resources.enemyBullet, new Point(enemy.getX() - 3, enemy.getY() - 35)));
             }
         }
 
@@ -207,8 +214,10 @@ public class Main extends JPanel {
         g2.drawString("Lives: " + lives + "               Score: " + score, 50, 50);
 
         if(gameOver){
+
             g2.setFont((new Font("TimesRoman", Font.PLAIN, 40)));
-            g2.drawString("GAME OVER", getWidth()/2, getHeight()/2);
+            g2.drawString("GAME OVER", getWidth()/2-140, getHeight()/2);
+
         }
 
 

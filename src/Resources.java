@@ -11,7 +11,7 @@ public class Resources  { //holding spot for our buffered image objects, based o
     //    ImageIO line.
 
 
-    public static BufferedImage test, charlie, greenAlienBall, purpleSquid, pinkShield,greenGun,playerBullet;
+    public static BufferedImage test, charlie, greenAlienBall, purpleSquid, pinkShield,greenGun,playerBullet, enemyBullet;
 
     static{
         try{
@@ -22,6 +22,7 @@ public class Resources  { //holding spot for our buffered image objects, based o
             pinkShield = ImageIO.read(new File("./res/pink-shield.png"));
             greenGun = ImageIO.read(new File("./res/green-gun.png"));
             playerBullet = ImageIO.read(new File("./res/player-projectile.png"));
+            enemyBullet = ImageIO.read(new File("./res/enemy-projectile.png"));
 
 
         }catch(Exception e){e.printStackTrace();}
