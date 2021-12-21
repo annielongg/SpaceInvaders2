@@ -212,6 +212,7 @@ public class Main extends JPanel {
         //text showing lives
         g2.setFont((new Font("TimesRoman", Font.PLAIN, 24)));
         g2.drawString("Lives: " + lives + "               Score: " + score, 50, 50);
+        g2.drawString("Restart",700,50);
 
         if(gameOver){
 

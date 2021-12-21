@@ -14,7 +14,7 @@ public class StylingRectangles {
     }
 
     public void drawRects(int x, int y, int length,int width, Graphics2D g2){
-        g2.setColor(Color.PINK);
+        g2.setColor(Color.decode("#6F8968"));
         g2.fillRect(x,y,width,length);
     }
 
