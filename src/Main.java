@@ -3,6 +3,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.util.ArrayList;
 
 public class Main extends JPanel {
@@ -40,7 +42,6 @@ public class Main extends JPanel {
         playerBullets = new ArrayList();
         alienProjectiles = new ArrayList();
 
-        StylingRectangles background = new StylingRectangles(800,800,0,0);
 
         enemies = new ArrayList();
         for (int i = 0; i < 5; i++) {
@@ -158,13 +159,18 @@ public class Main extends JPanel {
         //enemy aliens shoot back
 
         for (Sprite enemy: enemies) {
-            if(Math.random()<.0002){
+            if(Math.random()<.0002) {
                 alienProjectiles.add(new Sprite(Resources.enemyBullet, new Point(enemy.getX() - 3, enemy.getY() - 35)));
             }
         }
 
         for(Sprite alien : alienProjectiles){
-            alien.move(0,2);
+            if(enemies.size()<25){
+                alien.move(0,2);
+            }else{
+                alien.move(0,6);
+            }
+
         }
 
         for (int j = 0; j<alienProjectiles.size();j++) {
@@ -193,7 +199,12 @@ public class Main extends JPanel {
             changes should happen elsewhere.
          */
 
+        g2.setColor(Color.decode("#F5ECF7"));
+        g2.fillRect(0,0,getWidth(),getHeight());
+        g2.setColor(Color.BLACK);
+
         greenGun.draw(g2);
+
 
         for (Sprite laser: playerBullets) {
             laser.draw(g2);
@@ -210,14 +221,18 @@ public class Main extends JPanel {
         }
 
         //text showing lives
-        g2.setFont((new Font("TimesRoman", Font.PLAIN, 24)));
-        g2.drawString("Lives: " + lives + "               Score: " + score, 50, 50);
-        g2.drawString("Restart",700,50);
+        g2.setColor(Color.decode("#6D4875"));
+        g2.setFont((new Font("Arial", Font.BOLD, 30)));
+        g2.drawString("Lives: " + lives + "         Score: " + score, 20, 50);
+//        g2.drawString("Restart",700,50);
 
         if(gameOver){
+            g2.setColor(Color.decode("#F5ECF7"));
+            g2.drawRect(getWidth()/2-330,getHeight()/2,100,600);
 
-            g2.setFont((new Font("TimesRoman", Font.PLAIN, 40)));
-            g2.drawString("GAME OVER", getWidth()/2-140, getHeight()/2);
+            g2.setColor(Color.decode("#6D4875"));
+            g2.setFont((new Font("Arial", Font.BOLD, 100)));
+            g2.drawString("GAME OVER", getWidth()/2-330, getHeight()/2);
 
         }
 
@@ -241,6 +256,36 @@ public class Main extends JPanel {
 
             }
         });
+
+        addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                if(e.getX()>=700 && e.getX()<=760 && e.getY()>=50 && e.getY()<=100){
+
+                }
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+
+            }
+        });
+
     }
 
 

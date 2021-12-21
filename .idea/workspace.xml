@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2bc41fb3-9080-45ae-afd9-61286f531e41" name="Changes" comment="">
+    <list default="true" id="2bc41fb3-9080-45ae-afd9-61286f531e41" name="Changes" comment="12/21">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SpaceInvaders/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SpaceInvaders/Main$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SpaceInvaders/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SpaceInvaders/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SpaceInvaders/StylingRectangles.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StylingRectangles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StylingRectangles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StylingRectangles.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +23,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -69,6 +78,14 @@
       <option name="presentableId" value="Default" />
       <updated>1639922552181</updated>
     </task>
+    <task id="LOCAL-00001" summary="12/21">
+      <created>1640098115091</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1640098115091</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -85,5 +102,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="12/21" />
+    <option name="LAST_COMMIT_MESSAGE" value="12/21" />
   </component>
 </project>
